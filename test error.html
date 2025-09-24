@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spell Check</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #d6ebff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      background-color: #ffffff;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      color: #555;
+      font-weight: 600;
+    }
+
+    input[type="text"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px 14px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+      background-color: #fdfdfd;
+      transition: border-color 0.3s;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #007BFF;
+      outline: none;
+    }
+
+    button[type="submit"] {
+      background-color: #007BFF;
+      color: white;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .readonly-section {
+      border: 1px solid #e0e0e0;
+      padding: 20px;
+      background-color: #fafafa;
+      margin-top: 30px;
+      border-radius: 8px;
+    }
+
+    .readonly-section strong {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    p {
+      color: #444;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Spell Check</h1>
+    <form id="Spell Check">
+      <!-- Text input -->
+      <label for="name">Namee ( user)</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" />
+
+      <!-- Dropdown/select -->
+      <label for="country">Countryies</label>
+      <select id="country" name="country">
+        <option value="">Select your counry</option>
+        <option value="usa">United Statos</option>
+        <option value="uk">United Kingdem</option>
+        <option value="canada">Canada</option>
+        <option value="australia">Australia</option>
+      </select>
+
+      <!-- Text area -->
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" placeholder="Type your mesage here..."></textarea>
+
+      <!-- Submit button -->
+      <button type="submit">Submi</button>
+    </form>
+
+    <!-- Read-only sections -->
+    <div class="readonly-section">
+      <strong>UK English</strong>
+      <p>
+        The organisation decided to modernise its office to improve the overall colour scheme and optimise workflow.
+        The team analysed the current layout and realised it needed to be more efficient. After finalising the plans,
+        they authorised the contractors to begin the refurbishment. Everyone was excited about the new programme,
+        especially since the office would finally have proper air conditioning and better lighting.
+      </p>
+    </div>
+
+    <div class="readonly-section">
+      <strong>US English</strong>
+      <p>
+        The organization decided to modernize its office to improve the overall color scheme and optimize workflow.
+        The team analyzed the current layout and realized it needed to be more efficient. After finalizing the plans,
+        they authorized the contractors to begin the refurbishment. Everyone was excited about the new program,
+        especially since the office would finally have proper air conditioning and better lighting.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
